@@ -1,3 +1,5 @@
+import Buttons from "../Buttons/Buttons";
+
 const BurgerMenu = () => {
   return (
     <div className="flex flex-col items-center h-screen w-20 border-r border-gray-400">
@@ -8,15 +10,22 @@ const BurgerMenu = () => {
         </span>
       </button>
 
-      <div className="flex flex-col">
-        <button className="h-4 w-4 my-2 rounded-full bg-lime-500"></button>
-        <button className="h-4 w-4 my-2 rounded-full bg-amber-500"></button>
-        <button className="h-4 w-4 my-2 rounded-full bg-blue-500"></button>
-        <button className="h-4 w-4 my-2 rounded-full bg-pink-400"></button>
-        <button className="h-4 w-4 my-2 rounded-full bg-gray-400"></button>
-      </div>
+      <Buttons data={createArrId()} />
     </div>
   );
 };
+
+function createArrId() {
+  const arr = [];
+
+  for (let i = 0; i < 5; i++) {
+    const numberId = Math.floor(Math.random() * 100);
+    const id = {
+      id: numberId,
+    };
+    arr.push(id);
+  }
+  return arr;
+}
 
 export default BurgerMenu;
