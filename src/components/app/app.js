@@ -1,4 +1,4 @@
-import BurgerMenu from "../burger-menu/Burger-menu";
+import BurgerMenu from "../Burger-menu/Burger-menu";
 import TaskArea from "../Task-area/Task-area";
 
 const App = () => {
