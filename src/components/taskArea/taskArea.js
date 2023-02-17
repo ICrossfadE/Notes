@@ -1,4 +1,4 @@
-import TaskItem from "../Task-item/Task-tem";
+import TaskItem from "../taskItem/taskItem";
 import { state } from "../../state";
 
 const TaskArea = () => {

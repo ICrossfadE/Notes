@@ -1,4 +1,4 @@
-import "./Task-item.css";
+import "./taskItem.css";
 import { state } from "../../state";
 
 const TaskItem = ({ task }) => {

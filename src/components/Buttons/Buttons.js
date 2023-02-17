@@ -1,4 +1,4 @@
-import ButtonCreateItem from "../Button-create-item/Button-create-item";
+import ButtonCreateItem from "../buttonCreateItem/ButtonCreateItem";
 import { state } from "../../state/index";
 
 const Buttons = () => {
