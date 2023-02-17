@@ -10,22 +10,9 @@ const BurgerMenu = () => {
         </span>
       </button>
 
-      <Buttons data={createArrId()} />
+      <Buttons />
     </div>
   );
 };
-
-function createArrId() {
-  const arr = [];
-
-  for (let i = 0; i < 5; i++) {
-    const numberId = Math.floor(Math.random() * 100);
-    const id = {
-      id: numberId,
-    };
-    arr.push(id);
-  }
-  return arr;
-}
 
 export default BurgerMenu;
