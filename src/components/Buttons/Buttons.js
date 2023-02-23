@@ -1,8 +1,8 @@
 import ButtonCreateItem from "../buttonCreateItem/buttonCreateItem";
-import { state } from "../../state/index";
+import { store } from "../../state/index";
 
-const Buttons = () => {
-  const elements = state.categoryList.map((item) => {
+const Buttons = (state) => {
+  const elements = store.categoryList.map((item) => {
     const { id } = item;
     return <ButtonCreateItem key={id} item={item} />;
   });

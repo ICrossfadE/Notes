@@ -6,7 +6,8 @@ const ButtonCreateItem = ({ item }) => {
     <button
       id={item.id}
       style={style}
-      className="h-4 w-4 my-2 rounded-full bg-lime-500"
+      className="h-4 w-4 my-2 rounded-full"
+      // onClick={}
     ></button>
   );
 };

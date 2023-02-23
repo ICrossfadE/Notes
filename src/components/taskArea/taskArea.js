@@ -1,5 +1,5 @@
 import TaskItem from "../taskItem/taskItem";
-import { state } from "../../state";
+import { store } from "../../state/index";
 
 const TaskArea = () => {
   return (
@@ -11,7 +11,7 @@ const TaskArea = () => {
 };
 
 const Tasks = () => {
-  const tasks = state.taskList.map((task) => {
+  const tasks = store.taskList.map((task) => {
     return <TaskItem key={task.id} task={task} />;
   });
 
