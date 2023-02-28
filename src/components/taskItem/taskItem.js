@@ -1,5 +1,5 @@
 import "./taskItem.css";
-import { store } from "../../state/index";
+import { store } from "../../state";
 
 const TaskItem = ({ task }) => {
   const category = store.categoryList.find((category) => {

@@ -8,10 +8,10 @@ const ButtonCreateItem = ({ item }) => {
     backgroundColor: item.color,
   };
 
-  const createNewTask = (typeId) => {
+  const createNewTask = (categoryId) => {
     const newTask = {
-      id: taskList.length + 1,
-      categoryId: typeId,
+      id: Math.max(...taskList.map((task) => task.id)) + 1,
+      categoryId: categoryId,
       textContent: "some text",
     };
 

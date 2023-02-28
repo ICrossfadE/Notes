@@ -1,13 +1,12 @@
 import ButtonCreateItem from "../buttonCreateItem/buttonCreateItem";
-import { store } from "../../state/index";
+import { store } from "../../state";
 
-const Buttons = (state) => {
-  const elements = store.categoryList.map((item) => {
-    const { id } = item;
-    return <ButtonCreateItem key={id} item={item} />;
+const Buttons = () => {
+  const buttonCreateItems = store.categoryList.map((categoryItem) => {
+    return <ButtonCreateItem key={categoryItem.id} item={categoryItem} />;
   });
 
-  return <div className="flex flex-col">{elements}</div>;
+  return <div className="flex flex-col">{buttonCreateItems}</div>;
 };
 
 export default Buttons;
