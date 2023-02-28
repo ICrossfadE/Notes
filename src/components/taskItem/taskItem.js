@@ -1,16 +1,16 @@
 import "./taskItem.css";
-import { state } from "../../state";
+import { store } from "../../state";
 
 const TaskItem = ({ task }) => {
-  const category = state.categoryList.find((category) => {
+  const category = store.categoryList.find((category) => {
     return category.id === task.categoryId;
   });
+  console.log(category);
 
   const style = {
     backgroundColor: category.color,
   };
 
-  console.log("task", task, category);
   return (
     <div
       style={style}
@@ -21,7 +21,7 @@ const TaskItem = ({ task }) => {
           {task.textContent}
         </div>
         <button className="flex items-center justify-center w-8 h-8  rounded-full bg-zinc-900">
-          <span class="pb-0.5 material-symbols-outlined text-amber-400">
+          <span className="pb-0.5 material-symbols-outlined text-amber-400">
             star
           </span>
         </button>
@@ -30,7 +30,7 @@ const TaskItem = ({ task }) => {
       <div className="flex justify-between">
         <span>May 10.02.23</span>
         <button className="flex items-center justify-center w-8 h-8 rounded-full bg-zinc-900">
-          <span class="text-base material-symbols-outlined text-amber-400">
+          <span className="text-base material-symbols-outlined text-amber-400">
             edit
           </span>
         </button>

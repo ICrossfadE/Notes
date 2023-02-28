@@ -1,9 +1,10 @@
+import { useSelector } from "react-redux";
+
 import TaskItem from "../taskItem/taskItem";
-import { state } from "../../state";
 
 const TaskArea = () => {
   return (
-    <div className="p-14">
+    <div className="p-14 w-full">
       <h1 className="m-2 text-7xl">Notes</h1>
       <Tasks />
     </div>
@@ -11,11 +12,13 @@ const TaskArea = () => {
 };
 
 const Tasks = () => {
-  const tasks = state.taskList.map((task) => {
+  const taskList = useSelector((state) => state.taskList);
+
+  const tasks = taskList.map((task) => {
     return <TaskItem key={task.id} task={task} />;
   });
 
-  return <div className="flex">{tasks}</div>;
+  return <div className="flex flex-wrap">{tasks}</div>;
 };
 
 export default TaskArea;
