@@ -6,6 +6,7 @@ export const store = {
     { id: 4, color: "#537FE7" },
     { id: 5, color: "#C9F4AA" },
   ],
+
   taskList: [
     { id: 1, categoryId: 1, textContent: "some text" },
     { id: 2, categoryId: 5, textContent: "some text2" },

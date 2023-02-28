@@ -1,2 +1,2 @@
-export const createNewTask = () => ({ type: "CREATE" });
-export const deleteNewTask = () => ({ type: "DELETE" });
+export const createNewTask = () => ({ type: "CREATE", payload });
+export const deleteNewTask = () => ({ type: "DELETE", payload });
