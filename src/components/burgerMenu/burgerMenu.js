@@ -1,4 +1,4 @@
-import Buttons from "../buttons/buttons";
+import Buttons from "../buttons/Buttons";
 
 const BurgerMenu = () => {
   return (
