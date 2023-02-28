@@ -10,13 +10,15 @@ const ButtonCreateItem = ({ item }) => {
 
   const createNewTask = (categoryId) => {
     const newTask = {
-      id: Math.max(...taskList.map((task) => task.id)) + 1,
+      id: taskList.length
+        ? Math.max(...taskList.map((task) => task.id)) + 1
+        : 1,
       categoryId: categoryId,
       textContent: "some text",
     };
 
     dispatch({
-      type: "CREATE",
+      type: "ADD",
       payload: newTask,
     });
   };

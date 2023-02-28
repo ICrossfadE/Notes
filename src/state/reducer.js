@@ -2,10 +2,10 @@ import { store } from "./index";
 
 const reducer = (state = store, actions) => {
   switch (actions.type) {
-    case "CREATE":
+    case "ADD":
       return {
         ...state,
-        taskList: [...state.taskList, actions.payload],
+        taskList: [actions.payload, ...state.taskList],
       };
     case "DELETE":
       return {

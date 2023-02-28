@@ -8,9 +8,9 @@ export const store = {
   ],
 
   taskList: [
-    { id: 1, categoryId: 1, textContent: "some text" },
-    { id: 2, categoryId: 5, textContent: "some text2" },
-    { id: 3, categoryId: 2, textContent: "some text3" },
+    // { id: 1, categoryId: 1, textContent: "some text" },
+    // { id: 2, categoryId: 5, textContent: "some text2" },
+    // { id: 3, categoryId: 2, textContent: "some text3" },
   ],
   test: 0,
 };
